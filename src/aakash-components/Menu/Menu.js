@@ -23,10 +23,8 @@ const Menu = () => {
   useEffect(() => {
     axios
       .get(`http://127.0.0.1:3001/foods/${mealTime}`)
-      .get("http://127.0.0.1:3001/foods/Breakfast")
       .then((resp) => resp.data)
       .then((data) => setAllItems(data));
-    console.log("axios get req");
   }, [mealTime]);
 
   useEffect(() => {
@@ -52,12 +50,17 @@ const Menu = () => {
               />
             ))}
           </div>
-          <AddNewMealItem />
+          <AddNewMealItem allItems={allItems} setAllItems={setAllItems} />
         </MenuContainer>
       ) : (
         <OrderContainer>
           {allOrders.map((elem, ind) => (
-            <OrderItem item={elem} key={ind} />
+            <OrderItem
+              allOrders={allOrders}
+              setAllOrders={setAllOrders}
+              item={elem}
+              key={ind}
+            />
           ))}
         </OrderContainer>
       )}

@@ -2,9 +2,13 @@ import { ReadyBtn, Wrapper, IconImg } from "./OrderItem.styles";
 
 import call from "./phone-solid.svg";
 
-const OrderItem = ({ item }) => {
+const OrderItem = ({ allOrders, setAllOrders, item }) => {
   const orderComplete = () => {
     alert(`order complete for ${item.user_name}`);
+  };
+
+  const removeOrder = () => {
+    console.log("remove");
   };
 
   return (
@@ -28,7 +32,10 @@ const OrderItem = ({ item }) => {
           </div>
         ))}
         <div>Total: {item.totol_cost}</div>
-        <ReadyBtn onClick={orderComplete}>Ready!</ReadyBtn>
+        <div className="order-buttons">
+          <ReadyBtn onClick={orderComplete}>Ready!</ReadyBtn>
+          <ReadyBtn onClick={removeOrder}>REMOVE</ReadyBtn>
+        </div>
       </div>
     </Wrapper>
   );

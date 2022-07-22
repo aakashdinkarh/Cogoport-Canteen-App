@@ -4,7 +4,7 @@ import axios from "axios";
 import { ReadyBtn } from "../OrderItem/OrderItem.styles";
 import { NewItemWrapper } from "./AddNewItem.styles";
 
-const AddNewMealItem = () => {
+const AddNewMealItem = ({ allItems, setAllItems }) => {
   const [itemName, setItemName] = useState("");
   const [itemCost, setItemCost] = useState(0);
   const [itemType, setItemType] = useState("Breakfast");
@@ -13,13 +13,15 @@ const AddNewMealItem = () => {
     "https://giardino.axiomthemes.com/wp-content/uploads/2017/12/bg-11-copyright-1520x834.jpg";
 
   const addNewItem = () => {
-    axios.post(`http://127.0.0.1:3001/food`, {
-      item_name: itemName,
-      item_cost: itemCost,
-      item_type: itemType,
-      item_available: itemAvailable,
+    const newMealItem = {
+      name: itemName,
+      cost: itemCost,
+      food_type: itemType,
+      available: itemAvailable,
       food_img: itemImg,
-    });
+    };
+    setAllItems([...allItems, newMealItem]);
+    axios.post(`http://127.0.0.1:3001/food`, newMealItem);
   };
 
   return (

@@ -2,8 +2,6 @@ import { ItemContainer } from "./MenuItem.styles";
 import axios from "axios";
 
 const MenuItem = ({ allItems, setAllItems, item }) => {
-  console.log(item);
-
   const handleChange = () => {
     const newAvailable = !item.available;
     const newAllItems = allItems.map((elem) => {
@@ -28,7 +26,11 @@ const MenuItem = ({ allItems, setAllItems, item }) => {
   };
 
   const deleteFood = () => {
-    axios.delete(`http://127.0.0.1:3001/food/${item.id}`).then((id) => id);
+    const newAllItems = allItems.filter((elem) => elem.id !== item.id);
+    setAllItems(newAllItems);
+    axios
+      .delete(`http://127.0.0.1:3001/food/${item.id}`)
+      .then((data) => console.log(data));
   };
 
   return (
@@ -38,12 +40,7 @@ const MenuItem = ({ allItems, setAllItems, item }) => {
       </div>
       <div>
         <div className="item-details">
-          <span
-            onChange={(e) => console.log(e.target.value)}
-            className="item-name"
-          >
-            {item.name}
-          </span>
+          <span className="item-name">{item.name}</span>
           <span className="item-cost">{item.cost}</span>
           <input
             className="availableCheck"
