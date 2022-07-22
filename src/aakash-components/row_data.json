@@ -1,0 +1,198 @@
+{
+    "menu_items": {
+        "breakfast": [
+            {
+                "id": 1,
+                "name": "Paratha",
+                "cost": "$70",
+                "src": "https://giardino.axiomthemes.com/wp_content/uploads/2017/12/bg_11_copyright_300x165.jpg",
+                "available": true
+            },
+            {
+                "id": 1,
+                "name": "Paratha",
+                "cost": "$70",
+                "src": "https://giardino.axiomthemes.com/wp_content/uploads/2017/12/bg_11_copyright_300x165.jpg",
+                "available": true
+            },
+            {
+                "id": 1,
+                "name": "Paratha",
+                "cost": "$70",
+                "src": "https://giardino.axiomthemes.com/wp_content/uploads/2017/12/bg_11_copyright_300x165.jpg",
+                "available": true
+            },
+            {
+                "id": 1,
+                "name": "Paratha",
+                "cost": "$70",
+                "src": "https://giardino.axiomthemes.com/wp_content/uploads/2017/12/bg_11_copyright_300x165.jpg",
+                "available": true
+            },
+            {
+                "id": 1,
+                "name": "Paratha",
+                "cost": "$70",
+                "src": "https://giardino.axiomthemes.com/wp_content/uploads/2017/12/bg_11_copyright_300x165.jpg",
+                "available": true
+            }
+        ],
+        "lunch": [
+            {
+                "id": 1,
+                "name": "Paneer-Paratha",
+                "cost": "$140",
+                "src": "https://giardino.axiomthemes.com/wp_content/uploads/2017/12/bg_11_copyright_300x165.jpg",
+                "available": true
+            },
+            {
+                "id": 1,
+                "name": "Paneer-Paratha",
+                "cost": "$140",
+                "src": "https://giardino.axiomthemes.com/wp_content/uploads/2017/12/bg_11_copyright_300x165.jpg",
+                "available": true
+            },
+            {
+                "id": 1,
+                "name": "Paneer-Paratha",
+                "cost": "$140",
+                "src": "https://giardino.axiomthemes.com/wp_content/uploads/2017/12/bg_11_copyright_300x165.jpg",
+                "available": true
+            },
+            {
+                "id": 1,
+                "name": "Paneer-Paratha",
+                "cost": "$140",
+                "src": "https://giardino.axiomthemes.com/wp_content/uploads/2017/12/bg_11_copyright_300x165.jpg",
+                "available": true
+            },
+            {
+                "id": 1,
+                "name": "Paneer-Paratha",
+                "cost": "$140",
+                "src": "https://giardino.axiomthemes.com/wp_content/uploads/2017/12/bg_11_copyright_300x165.jpg",
+                "available": true
+            }
+        ],
+        "dinner": [
+            {
+                "id": 1,
+                "name": "Lachha Paratha",
+                "cost": "$120",
+                "src": "https://giardino.axiomthemes.com/wp_content/uploads/2017/12/bg_11_copyright_300x165.jpg",
+                "available": true
+            },
+            {
+                "id": 1,
+                "name": "Lachha Paratha",
+                "cost": "$120",
+                "src": "https://giardino.axiomthemes.com/wp_content/uploads/2017/12/bg_11_copyright_300x165.jpg",
+                "available": true
+            },
+            {
+                "id": 1,
+                "name": "Lachha Paratha",
+                "cost": "$120",
+                "src": "https://giardino.axiomthemes.com/wp_content/uploads/2017/12/bg_11_copyright_300x165.jpg",
+                "available": true
+            },
+            {
+                "id": 1,
+                "name": "Lachha Paratha",
+                "cost": "$120",
+                "src": "https://giardino.axiomthemes.com/wp_content/uploads/2017/12/bg_11_copyright_300x165.jpg",
+                "available": true
+            },
+            {
+                "id": 1,
+                "name": "Lachha Paratha",
+                "cost": "$120",
+                "src": "https://giardino.axiomthemes.com/wp_content/uploads/2017/12/bg_11_copyright_300x165.jpg",
+                "available": true
+            }
+        ]
+    },
+    "orders": [
+        {
+            "user_name": "Prabjyot Sudan",
+            "user_ph": "7900134918",
+            "items": [
+                {
+                    "item_name": "Paratha",
+                    "item_cost": "70",
+                    "quantity": 10
+                },
+                {
+                    "item_name": "Paratha",
+                    "item_cost": "70",
+                    "quantity": 10
+                },
+                {
+                    "item_name": "Paratha",
+                    "item_cost": "70",
+                    "quantity": 10
+                },
+                {
+                    "item_name": "Paratha",
+                    "item_cost": "70",
+                    "quantity": 10
+                }
+            ],
+            "totol_cost": "2800"
+        },
+        {
+            "user_name": "Prabjyot Sudan",
+            "user_ph": "7900134918",
+            "items": [
+                {
+                    "item_name": "Paratha",
+                    "item_cost": "70",
+                    "quantity": 10
+                },
+                {
+                    "item_name": "Paratha",
+                    "item_cost": "70",
+                    "quantity": 10
+                },
+                {
+                    "item_name": "Paratha",
+                    "item_cost": "70",
+                    "quantity": 10
+                },
+                {
+                    "item_name": "Paratha",
+                    "item_cost": "70",
+                    "quantity": 10
+                }
+            ],
+            "totol_cost": "2800"
+        },
+        {
+            "user_name": "Prabjyot Sudan",
+            "user_ph": "7900134918",
+            "items": [
+                {
+                    "item_name": "Paratha",
+                    "item_cost": "70",
+                    "quantity": 10
+                },
+                {
+                    "item_name": "Paratha",
+                    "item_cost": "70",
+                    "quantity": 10
+                },
+                {
+                    "item_name": "Paratha",
+                    "item_cost": "70",
+                    "quantity": 10
+                },
+                {
+                    "item_name": "Paratha",
+                    "item_cost": "70",
+                    "quantity": 10
+                }
+            ],
+            "totol_cost": "2800"
+        }
+    ]
+}
