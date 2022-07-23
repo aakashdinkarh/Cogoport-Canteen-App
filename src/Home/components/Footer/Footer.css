@@ -1,0 +1,40 @@
+.SakshiComponent .main_1 {
+  background-color: black;
+  width: 100%;
+  height: 500px;
+}
+.SakshiComponent h1 {
+  font-family: "Sacramento", cursive;
+  color: bisque;
+  padding-left: 50px;
+  padding-top: 50px;
+  font-size: 3rem;
+}
+.SakshiComponent .text_3 {
+  width: 20%;
+  color: #888473;
+  padding-left: 50px;
+  font-size: 1.2rem;
+}
+.SakshiComponent .insta {
+  margin-right: 0;
+  font-family: Cormorant Infant, Sans-serif;
+}
+.SakshiComponent .check {
+  display: flex;
+}
+.SakshiComponent .check2 {
+  margin-left: 30px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  font-size: 3;
+  margin-top: 30px;
+}
+.SakshiComponent .image {
+  height: 300px;
+  width: 300px;
+  margin-left: 160px;
+}
+.SakshiComponent .yo {
+  display: flex;
+}

@@ -1,22 +1,33 @@
 import styled from "styled-components";
 
 export const NewItemWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  border: 1px solid #b7b095;
+  padding: 10px;
 
-  label {
-    font-family: initial;
-    font-weight: initial;
-  }
+  .inputContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 
-  > input,
-  select {
-    border: none;
-    margin: 10px 15px 0 0;
-    font-size: 15px;
-    padding: 10px;
-    :focus {
+    label {
+      font-family: initial;
+      font-weight: initial;
+    }
+
+    > input,
+    select {
+      border: none;
+      margin: 10px 15px 0 0;
+      font-size: 15px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    > input:focus {
       outline: none;
     }
   }
+`;
+
+export const AddBtnContainer = styled.div`
+  margin-top: 10px;
 `;

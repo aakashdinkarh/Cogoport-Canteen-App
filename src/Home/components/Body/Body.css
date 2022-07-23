@@ -1,0 +1,78 @@
+img{
+    width:100%;
+    height:100%;
+}
+.main{
+    margin-top: 0;
+    height:800px;
+   
+    background-image: url(https://giardino.axiomthemes.com/wp-content/uploads/2017/12/sidebar-bg_pattern.png?id=509);
+   
+
+}
+.one{
+    height:600px;
+    width: 400px;
+    padding-left: -20px;
+    padding-right: 100px;
+    
+    /* position: relative; */
+    left: 800px;
+
+}
+.text-container{
+    position: relative;
+    bottom: 400px;
+    
+    background-color: black;
+    width: 30%;
+margin-top: 150px;
+    margin-left: 100px;
+    padding: 10px;
+    
+}
+.text{
+    color: #888473;
+}
+.pose{
+    width: 60%;
+    padding-left: 50px;
+}
+.welcome{
+    /* position: absolute; */
+    /* top: 100px;
+    left: 50px; */
+    padding-top: 10px;
+    padding-left: 50px;
+    margin-top: 0;
+    font-family: 'Sacramento', cursive;
+    color: #888473;
+    font-size: 3rem;
+}
+.headingContainer {
+    position: relative;
+}
+.headingContainer .hrContainer {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+.hrContainer hr {
+    border-style: none;
+    border-top-style: solid;
+    border-color:  #888473;
+    border-width: 5px;
+    width: 5px;
+}
+.canteen-intro{
+    padding-top: 0;
+    padding-left: 54px;
+    color: black;
+    font-family: Cormorant Infant, sans-serif;;
+    font-size: 1.5rem;
+}
+
+.mainDesc {
+    display: flex;
+
+}

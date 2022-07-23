@@ -1,14 +1,28 @@
-import { ReadyBtn, Wrapper, IconImg } from "./OrderItem.styles";
+import { ReadyBtn, RemoveBtn, Wrapper, IconImg } from "./OrderItem.styles";
 
 import call from "./phone-solid.svg";
 
 const OrderItem = ({ allOrders, setAllOrders, item }) => {
   const orderComplete = () => {
-    alert(`order complete for ${item.user_name}`);
+    const newOrderItem = {
+      id: item.id,
+      items: [...item.items],
+      orderDelivered: item.orderDelivered,
+      orderInProcess: !item.orderInProcess,
+      totol_cost: item.totol_cost,
+      user_name: item.user_name,
+      user_ph: item.user_ph,
+    };
+    const newAllOrders = allOrders.map((elem) => {
+      if (elem.id !== item.id) return elem;
+      else return newOrderItem;
+    });
+    setAllOrders(newAllOrders);
   };
 
   const removeOrder = () => {
-    console.log("remove");
+    const newAllOrders = allOrders.filter((elem) => elem.id !== item.id);
+    setAllOrders(newAllOrders);
   };
 
   return (
@@ -33,8 +47,15 @@ const OrderItem = ({ allOrders, setAllOrders, item }) => {
         ))}
         <div>Total: {item.totol_cost}</div>
         <div className="order-buttons">
-          <ReadyBtn onClick={orderComplete}>Ready!</ReadyBtn>
-          <ReadyBtn onClick={removeOrder}>REMOVE</ReadyBtn>
+          <ReadyBtn
+            orderInProcess={item.orderInProcess}
+            onClick={orderComplete}
+          >
+            Ready!
+          </ReadyBtn>
+          <RemoveBtn orderDelivered={item.orderDelivered} onClick={removeOrder}>
+            REMOVE
+          </RemoveBtn>
         </div>
       </div>
     </Wrapper>

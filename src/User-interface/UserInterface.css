@@ -1,0 +1,17 @@
+.menu-container-nav{
+    display: flex;
+}   
+
+.meale-type{
+    margin: 2%;
+}
+
+.background-image{
+    font-family: Cormorant Infant, sans-serif;
+    overflow: auto;
+    background-image: url(https://giardino.axiomthemes.com/wp-content/uploads/2017/12/sidebar-bg_pattern.png?id=509);
+}
+
+.horizontal-content{
+    display: flex;
+}

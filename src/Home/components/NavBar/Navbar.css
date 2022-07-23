@@ -1,0 +1,39 @@
+.NavbarItems{
+    background: black;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+   color:  #888473;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 1.2rem;
+   margin-left: auto;
+   z-index:2;
+
+}
+h1{
+    margin-right: 30px;
+}
+
+a{
+    color:  #888473; 
+}
+
+ul{
+    list-style-type: none;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+ margin-left: 400px;
+}
+li{
+    margin-right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}

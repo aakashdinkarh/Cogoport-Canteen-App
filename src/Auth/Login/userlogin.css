@@ -1,0 +1,70 @@
+.mparent {
+  color: #b7b095;
+  background-color: #262626;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2%;
+}
+.mLogin {
+  color: #888473;
+  padding: 5%;
+}
+.mposter {
+  /* position: relative; */
+  /* left: calc(-5% - 56px); */
+  background-color: #262626;
+}
+.mheading {
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+  justify-content: space-evenly;
+}
+.mtitle {
+  font-size: 30px;
+}
+.mdescription {
+  font-size: 15px;
+}
+/* .mhorizontal{
+    display: flex;
+    flex-direction: row;
+}
+.mhorizontal::before,.mhorizontal::after{
+    content: "";
+            flex: 1 1;
+            border-bottom: 2px solid #000;
+            margin: auto;
+} */
+.minputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 60%;
+}
+.minputs > input {
+  height: 40px;
+  outline: 0;
+  border-width: 0 0 3px;
+  border-color: #b7b095;
+  background-color: #262626;
+}
+.minputs > input:focus {
+  border-color: rgb(218, 168, 239);
+  background-color: #262626;
+}
+
+.mposter > img {
+  color: #b7b095;
+  height: 100%;
+  width: 100%;
+}
+
+.mlogin {
+  height: 40px;
+  border-radius: 5px;
+}
+
+.muserName {
+  color: #b7b095;
+}

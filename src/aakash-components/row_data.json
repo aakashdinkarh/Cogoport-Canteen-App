@@ -114,6 +114,7 @@
     },
     "orders": [
         {
+            "id": 1,
             "user_name": "Prabjyot Sudan",
             "user_ph": "7900134918",
             "items": [
@@ -138,9 +139,12 @@
                     "quantity": 10
                 }
             ],
-            "totol_cost": "2800"
+            "totol_cost": "2800",
+            "orderInProcess": true,
+            "orderDelivered": false
         },
         {
+            "id": 2,
             "user_name": "Prabjyot Sudan",
             "user_ph": "7900134918",
             "items": [
@@ -165,9 +169,12 @@
                     "quantity": 10
                 }
             ],
-            "totol_cost": "2800"
+            "totol_cost": "2800",
+            "orderInProcess": true,
+            "orderDelivered": false
         },
         {
+            "id": 3,
             "user_name": "Prabjyot Sudan",
             "user_ph": "7900134918",
             "items": [
@@ -192,7 +199,9 @@
                     "quantity": 10
                 }
             ],
-            "totol_cost": "2800"
+            "totol_cost": "2800",
+            "orderInProcess": true,
+            "orderDelivered": false
         }
     ]
 }

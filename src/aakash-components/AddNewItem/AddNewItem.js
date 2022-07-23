@@ -2,9 +2,9 @@ import { useState } from "react";
 import axios from "axios";
 //styles
 import { ReadyBtn } from "../OrderItem/OrderItem.styles";
-import { NewItemWrapper } from "./AddNewItem.styles";
+import { AddBtnContainer, NewItemWrapper } from "./AddNewItem.styles";
 
-const AddNewMealItem = ({ allItems, setAllItems }) => {
+const AddNewMealItem = ({ mealTime, allItems, setAllItems }) => {
   const [itemName, setItemName] = useState("");
   const [itemCost, setItemCost] = useState(0);
   const [itemType, setItemType] = useState("Breakfast");
@@ -12,21 +12,38 @@ const AddNewMealItem = ({ allItems, setAllItems }) => {
   const itemImg =
     "https://giardino.axiomthemes.com/wp-content/uploads/2017/12/bg-11-copyright-1520x834.jpg";
 
-  const addNewItem = () => {
-    const newMealItem = {
-      name: itemName,
-      cost: itemCost,
-      food_type: itemType,
-      available: itemAvailable,
-      food_img: itemImg,
-    };
-    setAllItems([...allItems, newMealItem]);
-    axios.post(`http://127.0.0.1:3001/food`, newMealItem);
-  };
+  async function addNewItem() {
+    if (itemName === "") {
+      alert("Item name cannot be empty");
+    } else if (itemCost === "") {
+      alert("Item cost cannot be null");
+    } else {
+      const id = await axios.post(`http://127.0.0.1:3001/food`, {
+        name: itemName,
+        cost: itemCost,
+        food_type: itemType,
+        available: itemAvailable,
+        food_img: itemImg,
+      });
+      if (mealTime === itemType) {
+        setAllItems([
+          ...allItems,
+          {
+            id: id.data,
+            name: itemName,
+            cost: itemCost,
+            food_type: itemType,
+            available: itemAvailable,
+            food_img: itemImg,
+          },
+        ]);
+      }
+    }
+  }
 
   return (
-    <>
-      <NewItemWrapper>
+    <NewItemWrapper>
+      <div className="inputContainer">
         <input
           value={itemName}
           placeholder="Item Name"
@@ -53,10 +70,13 @@ const AddNewMealItem = ({ allItems, setAllItems }) => {
           Image of item
           <input type="file" />
         </label>
-      </NewItemWrapper>
-      <br />
-      <ReadyBtn onClick={addNewItem}>Add Item to Meal</ReadyBtn>
-    </>
+        <AddBtnContainer>
+          <ReadyBtn orderInProcess={true} onClick={addNewItem}>
+            Add Item to Meal
+          </ReadyBtn>
+        </AddBtnContainer>
+      </div>
+    </NewItemWrapper>
   );
 };
 

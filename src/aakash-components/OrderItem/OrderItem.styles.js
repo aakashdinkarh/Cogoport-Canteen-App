@@ -37,7 +37,8 @@ export const Wrapper = styled.div`
 `;
 
 export const ReadyBtn = styled.button`
-  background-color: #b7b095;
+  background-color: ${({ orderInProcess }) =>
+    orderInProcess ? "#b7b095" : "green"};
   border: none;
   cursor: pointer;
   padding: 10px;
@@ -46,6 +47,11 @@ export const ReadyBtn = styled.button`
   :active {
     background-color: #938f80;
   }
+`;
+
+export const RemoveBtn = styled(ReadyBtn)`
+  background-color: ${({ orderDelivered }) =>
+    orderDelivered ? "#b7b095" : "red"};
 `;
 
 export const IconImg = styled.img`
