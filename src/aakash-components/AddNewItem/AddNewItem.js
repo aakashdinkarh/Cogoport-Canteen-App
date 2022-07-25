@@ -3,6 +3,7 @@ import axios from "axios";
 //styles
 import { ReadyBtn } from "../OrderItem/OrderItem.styles";
 import { AddBtnContainer, NewItemWrapper } from "./AddNewItem.styles";
+import swal from "sweetalert";
 
 const AddNewMealItem = ({ mealTime, allItems, setAllItems }) => {
   const [itemName, setItemName] = useState("");
@@ -14,18 +15,32 @@ const AddNewMealItem = ({ mealTime, allItems, setAllItems }) => {
 
   async function addNewItem() {
     if (itemName === "") {
-      alert("Item name cannot be empty");
+      swal({ title: "Item name cannot be empty", icon: "warning" });
     } else if (itemCost === "") {
-      alert("Item cost cannot be null");
+      swal({ title: "Item cost cannot be null", icon: "warning" });
+    } else if (itemCost === "0") {
+      swal({ title: "Item cost not be 0", icon: "warning" });
+    } else if (parseInt(itemCost) < 0) {
+      swal({ title: "Item cost not be negative", icon: "warning" });
     } else {
-      const id = await axios.post(`http://127.0.0.1:3001/food`, {
-        name: itemName,
-        cost: itemCost,
-        food_type: itemType,
-        available: itemAvailable,
-        food_img: itemImg,
-      });
       if (mealTime === itemType) {
+        setAllItems([
+          ...allItems,
+          {
+            name: itemName,
+            cost: itemCost,
+            food_type: itemType,
+            available: itemAvailable,
+            food_img: itemImg,
+          },
+        ]);
+        const id = await axios.post(`http://127.0.0.1:3001/food`, {
+          name: itemName,
+          cost: itemCost,
+          food_type: itemType,
+          available: itemAvailable,
+          food_img: itemImg,
+        });
         setAllItems([
           ...allItems,
           {
@@ -52,6 +67,7 @@ const AddNewMealItem = ({ mealTime, allItems, setAllItems }) => {
         <input
           value={itemCost}
           placeholder="Item Cost"
+          type="number"
           onChange={(e) => setItemCost(e.target.value)}
         />
         <select value={itemType} onChange={(e) => setItemType(e.target.value)}>

@@ -11,7 +11,6 @@ import myData from "./row_data.json";
 
 //styles
 import { MenuContainer, OrderContainer, Wrapper } from "./ShopInterface.styles";
-// import AddNewMealItem from "./AddNewItem/AddNewItem";
 import axios from "axios";
 
 const ShopInterface = () => {
@@ -27,6 +26,9 @@ const ShopInterface = () => {
   }, [mealTime]);
 
   useEffect(() => {
+    // axios
+    //   .get(`http://127.0.0.1:3001/getOrderByUser`)
+    //   .then((resp) => setAllOrders(resp.data));
     setAllOrders(myData.orders);
   }, []);
 

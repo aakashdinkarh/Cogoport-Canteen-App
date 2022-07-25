@@ -13,6 +13,11 @@ export const NewItemWrapper = styled.div`
       font-family: initial;
       font-weight: initial;
     }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      /* margin: 0; */
+    }
 
     > input,
     select {
